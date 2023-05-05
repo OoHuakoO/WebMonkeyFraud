@@ -59,6 +59,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://webmonkeyfraud.onrender.com/",
   "browserslist": {
     "production": [
       ">0.2%",
