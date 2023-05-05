@@ -44,7 +44,7 @@ const App = () => {
   const [user, setUser] = useState();
   const [loadingAuth, setLoadingAuth] = useState(true);
   const [admin, setAdmin] = useState(false);
-  useEffect(()=>{
+  useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
         if (user.uid === "Bm4bg6z0KAavVlnCijLzIxjXN9y2") {
@@ -66,19 +66,19 @@ const App = () => {
           <Route path="/" exact>
             <Managepost />
           </Route>
-          <Route path="/report" exact>
+          <Route restricted={false} path="/report" exact>
             <Report />
           </Route>
-          <Route path="/post/:uid" exact>
+          <Route restricted={false} path="/post/:uid" exact>
             <SeepostAdmin />
           </Route>
-          <Route path="/admin/thief/post/:uid" exact>
+          <Route restricted={false} path="/admin/thief/post/:uid" exact>
             <AdminFindthief />
           </Route>
-          <Route path="/adminentersearch" exact>
+          <Route restricted={false} path="/adminentersearch" exact>
             <AdminEntersearch />
           </Route>
-          <Route path="/dashboard" exact>
+          <Route restricted={false} path="/dashboard" exact>
             <AdminDashboard />
           </Route>
         </Switch>
@@ -88,64 +88,64 @@ const App = () => {
     <Router>
       <usercontext.Provider value={{ user, setUser }}>
         <Switch>
-          <Route path="/" exact>
+          <Route restricted={false} path="/" exact>
             <Home />
           </Route>
-          <Route path="/post/history" exact>
+          <Route restricted={false} path="/post/history" exact>
             <History />
           </Route>
-          <Route path="/post/create" exact>
+          <Route restricted={false} path="/post/create" exact>
             <Createpost />
           </Route>
-          <Route path="/post/edit/:uid" exact>
+          <Route restricted={false} path="/post/edit/:uid" exact>
             <Editpost />
           </Route>
-          <Route path="/post/:uid" exact>
+          <Route restricted={false} path="/post/:uid" exact>
             <Post />
           </Route>
-          <Route path="/ranking" exact>
+          <Route restricted={false} path="/ranking" exact>
             <Rank />
           </Route>
-          <Route path="/login" exact>
+          <Route restricted={false} path="/login" exact>
             <Login />
           </Route>
-          <Route path="/signup" exact>
+          <Route restricted={false} path="/signup" exact>
             <Signup />
           </Route>
-          <Route path="/forgetpass" exact>
+          <Route restricted={false} path="/forgetpass" exact>
             <Forgetpass />
           </Route>
-          <Route path="/prevent" exact>
+          <Route restricted={false} path="/prevent" exact>
             <Prevent />
           </Route>
-          <Route path="/help" exact>
+          <Route restricted={false} path="/help" exact>
             <Helpnew />
           </Route>
-          <Route path="/contractus" exact>
+          <Route restricted={false} path="/contractus" exact>
             <Contractus />
           </Route>
-          <Route path="/mypost/:uid" exact>
+          <Route restricted={false} path="/mypost/:uid" exact>
             <Mypost />
           </Route>
-          <Route path="/post" exact>
+          <Route restricted={false} path="/post" exact>
             <Post />
           </Route>
-          <Route path="/postfacebook" exact>
+          <Route restricted={false} path="/postfacebook" exact>
             <PostFacebook />
           </Route>
-          <Route path="/postline" exact>
+          <Route restricted={false} path="/postline" exact>
             <PostLine />
           </Route>
-          <Route path="/posttwitter" exact>
+          <Route restricted={false} path="/posttwitter" exact>
             <PostTwitter />
           </Route>
-          <Route path="/postinstragram" exact>
+          <Route restricted={false} path="/postinstragram" exact>
             <PostInstragram />
           </Route>
-          <Route path="/postother" exact>
+          <Route restricted={false} path="/postother" exact>
             <PostOther />
           </Route>
-          <Route path="/linkruleshow" exact>
+          <Route restricted={false} path="/linkruleshow" exact>
             {user ? (
               <Linkruleshow />
             ) : (
@@ -161,19 +161,19 @@ const App = () => {
               />
             )}
           </Route>
-          <Route path="/profile/:uid" exact>
+          <Route restricted={false} path="/profile/:uid" exact>
             <Profile />
           </Route>
-          <Route path="/profile/edit/:uid" exact>
+          <Route restricted={false} path="/profile/edit/:uid" exact>
             <Editprofile />
           </Route>
-          <Route path="/changepass" exact>
+          <Route restricted={false} path="/changepass" exact>
             <Changepass />
           </Route>
-          <Route path="/thief/post/:uid" exact>
+          <Route restricted={false} path="/thief/post/:uid" exact>
             <Findthief />
           </Route>
-          <Route path="/entersearch" exact>
+          <Route restricted={false} path="/entersearch" exact>
             <Entersearch />
           </Route>
         </Switch>
