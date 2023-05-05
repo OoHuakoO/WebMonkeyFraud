@@ -149,11 +149,11 @@ const Commentitem = ({ postid }) => {
         }
         Setloading(true);
         const sentcomment = await Axios.post(
-          `https://monkeyfruad01.herokuapp.com/post/comment/${postid}`,
+          `https://monkeyfraud.onrender.com/post/comment/${postid}`,
           formdata
         );
         const sendnoti = await Axios.post(
-          `https://monkeyfruad01.herokuapp.com/post/notificationnonread/${postid}/${user.uid}`
+          `https://monkeyfraud.onrender.com/post/notificationnonread/${postid}/${user.uid}`
         );
 
         Setclick(sentcomment);
@@ -205,12 +205,12 @@ const Commentitem = ({ postid }) => {
   const gg = async () => {
     try {
       const getcommentall = await Axios.get(
-        `https://monkeyfruad01.herokuapp.com/post/commentmore/${postid}`
+        `https://monkeyfraud.onrender.com/post/commentmore/${postid}`
       );
       Setcommentmore(getcommentall.data.item);
       if (user) {
         const nameuser = await Axios.post(
-          "https://monkeyfruad01.herokuapp.com/user/userid",
+          "https://monkeyfraud.onrender.com/user/userid",
           {
             result: user,
           }
@@ -218,7 +218,7 @@ const Commentitem = ({ postid }) => {
         Setdata(nameuser.data.item);
 
         var profiledata = await Axios.post(
-          "https://monkeyfruad01.herokuapp.com/user/session",
+          "https://monkeyfraud.onrender.com/user/session",
           {
             user: user,
           }
@@ -230,7 +230,7 @@ const Commentitem = ({ postid }) => {
       console.log(err);
     }
   };
-  useEffect( async() => {
+  useEffect(async () => {
     gg();
   }, [click, showdelete, showedit, postid]);
 

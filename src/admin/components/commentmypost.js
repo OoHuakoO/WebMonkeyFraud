@@ -37,7 +37,7 @@ const Commentmypost = ({ postid }) => {
   const gg = async () => {
     try {
       const getcommentall = await Axios.get(
-        `https://monkeyfruad01.herokuapp.com/post/commentmore/${postid}`
+        `https://monkeyfraud.onrender.com/post/commentmore/${postid}`
       );
       Setcommentmore(getcommentall.data.item);
     } catch (err) {

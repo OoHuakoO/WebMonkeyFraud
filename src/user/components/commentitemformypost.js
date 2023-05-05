@@ -144,11 +144,11 @@ const Commentitemformypost = ({ postid }) => {
         }
         SetLoading(true);
         const sentcomment = await Axios.post(
-          `https://monkeyfruad01.herokuapp.com/post/comment/${postid}`,
+          `https://monkeyfraud.onrender.com/post/comment/${postid}`,
           formdata
         );
         const sendnoti = await Axios.post(
-          `https://monkeyfruad01.herokuapp.com/post/notificationnonread/${postid}/${user.uid}`
+          `https://monkeyfraud.onrender.com/post/notificationnonread/${postid}/${user.uid}`
         );
 
         Setclick(sentcomment);
@@ -196,12 +196,12 @@ const Commentitemformypost = ({ postid }) => {
   const gg = async () => {
     try {
       const getcommentall = await Axios.get(
-        `https://monkeyfruad01.herokuapp.com/post/commentmore/${postid}`
+        `https://monkeyfraud.onrender.com/post/commentmore/${postid}`
       );
       Setcommentmore(getcommentall.data.item);
       if (user) {
         const nameuser = await Axios.post(
-          "https://monkeyfruad01.herokuapp.com/user/userid",
+          "https://monkeyfraud.onrender.com/user/userid",
           {
             result: user,
           }
@@ -209,7 +209,7 @@ const Commentitemformypost = ({ postid }) => {
         Setdata(nameuser.data.item);
 
         var profiledata = await Axios.post(
-          "https://monkeyfruad01.herokuapp.com/user/session",
+          "https://monkeyfraud.onrender.com/user/session",
           {
             user: user,
           }

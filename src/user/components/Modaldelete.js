@@ -35,12 +35,12 @@ const Modaldelete = ({
     },
   };
 
-  let history = useHistory()
+  let history = useHistory();
 
   const deletedpost = async (commentid, commentmore) => {
     console.log(commentmore);
     const postdelete = await Axios.post(
-      `https://monkeyfruad01.herokuapp.com/post/delete/${commentid}`,
+      `https://monkeyfraud.onrender.com/post/delete/${commentid}`,
       commentmore
     );
     setIsActive(false);
@@ -50,7 +50,7 @@ const Modaldelete = ({
 
   const deletedcomment = async (commentid, commentmore) => {
     const postdelete = await Axios.post(
-      `https://monkeyfruad01.herokuapp.com/post/delete/comment/${commentid}`,
+      `https://monkeyfraud.onrender.com/post/delete/comment/${commentid}`,
       commentmore
     );
     setIsActive(false);
@@ -63,31 +63,29 @@ const Modaldelete = ({
 
   const deletedmypost = async (commentid, commentmore) => {
     const postdelete = await Axios.post(
-      `https://monkeyfruad01.herokuapp.com/post/delete/${commentid}`,
+      `https://monkeyfraud.onrender.com/post/delete/${commentid}`,
       commentmore
     );
     setIsActive(false);
     handlemodalclose();
     handledeletetorerender();
-    history.push("/post/history")
+    history.push("/post/history");
   };
-
 
   const deletedAdminMyPost = async (commentid, commentmore) => {
     const postdelete = await Axios.post(
-      `https://monkeyfruad01.herokuapp.com/post/delete/${commentid}`,
+      `https://monkeyfraud.onrender.com/post/delete/${commentid}`,
       commentmore
     );
     setIsActive(false);
     handlemodalclose();
     handledeletetorerender();
-    history.push("/report")
+    history.push("/report");
   };
-
 
   const deletedAdminHideReport = async (commentid, commentmore) => {
     const postdelete = await Axios.post(
-      `https://monkeyfruad01.herokuapp.com/post/report/delete/${commentid}`,
+      `https://monkeyfraud.onrender.com/post/report/delete/${commentid}`,
       commentmore
     );
     setIsActive(false);
@@ -105,15 +103,23 @@ const Modaldelete = ({
             contentLabel="Example Modal"
           >
             <div className="box-modal-delete">
-            <div className="text-delete">ท่านต้องการที่จะลบโพสต์ของท่านหรือไม่ ?</div>
-            <div className="box-button-delete">
-              <button className="button-delete-ok"
-                onClick={() => deletedpost(modalcommentid, modalcommentmore)}
-              >
-                คกลง{" "}
-              </button>
-              <div className="empty-delete"></div>
-              <button className="button-delete-cancle" onClick={() => handlemodalclose()}>ยกเลิก</button>
+              <div className="text-delete">
+                ท่านต้องการที่จะลบโพสต์ของท่านหรือไม่ ?
+              </div>
+              <div className="box-button-delete">
+                <button
+                  className="button-delete-ok"
+                  onClick={() => deletedpost(modalcommentid, modalcommentmore)}
+                >
+                  คกลง{" "}
+                </button>
+                <div className="empty-delete"></div>
+                <button
+                  className="button-delete-cancle"
+                  onClick={() => handlemodalclose()}
+                >
+                  ยกเลิก
+                </button>
               </div>
             </div>
           </Modal>
@@ -127,104 +133,156 @@ const Modaldelete = ({
             contentLabel="Example Modal"
           >
             <div className="box-modal-delete">
-              <div className="text-delete">ท่านต้องการที่จะลบคอมเมนต์ของท่านหรือไม่ ?</div>
+              <div className="text-delete">
+                ท่านต้องการที่จะลบคอมเมนต์ของท่านหรือไม่ ?
+              </div>
               <div className="box-button-delete">
-              <button className="button-delete-ok"
-                onClick={() => deletedcomment(modalcommentid, modalcommentmore)}
-              >
-                ตกลง{" "}
-              </button>
-              <div className="empty-delete"></div>
-              <button className="button-delete-cancle" onClick={() => handlemodalclose()}>ยกเลิก</button>
+                <button
+                  className="button-delete-ok"
+                  onClick={() =>
+                    deletedcomment(modalcommentid, modalcommentmore)
+                  }
+                >
+                  ตกลง{" "}
+                </button>
+                <div className="empty-delete"></div>
+                <button
+                  className="button-delete-cancle"
+                  onClick={() => handlemodalclose()}
+                >
+                  ยกเลิก
+                </button>
               </div>
             </div>
           </Modal>
         </div>
-      ) : text && text === "deletemypost" ? 
-      <div> 
-      <Modal
-      isOpen={openmodal}
-      onRequestClose={handlemodalclose}
-      style={customStyles}
-      contentLabel="Example Modal"
-    >
-      <div className="box-modal-delete">
-        <div className="text-delete">ท่านต้องการที่จะลบโพสต์ของท่านหรือไม่ ?</div>
-        <div className="box-button-delete">
-        <button className="button-delete-ok"
-          onClick={() => deletedmypost(modalcommentid, modalcommentmore)}
-        >
-          ตกลง{" "}
-        </button>
-        <div className="empty-delete"></div>
-        <button className="button-delete-cancle" onClick={() => handlemodalclose()}>ยกเลิก </button>
+      ) : text && text === "deletemypost" ? (
+        <div>
+          <Modal
+            isOpen={openmodal}
+            onRequestClose={handlemodalclose}
+            style={customStyles}
+            contentLabel="Example Modal"
+          >
+            <div className="box-modal-delete">
+              <div className="text-delete">
+                ท่านต้องการที่จะลบโพสต์ของท่านหรือไม่ ?
+              </div>
+              <div className="box-button-delete">
+                <button
+                  className="button-delete-ok"
+                  onClick={() =>
+                    deletedmypost(modalcommentid, modalcommentmore)
+                  }
+                >
+                  ตกลง{" "}
+                </button>
+                <div className="empty-delete"></div>
+                <button
+                  className="button-delete-cancle"
+                  onClick={() => handlemodalclose()}
+                >
+                  ยกเลิก{" "}
+                </button>
+              </div>
+            </div>
+          </Modal>
         </div>
-      </div>
-    </Modal>
-    </div> : text && text === "deletepostAdminPostAll" ? 
-      <div> 
-      <Modal
-      isOpen={openmodal}
-      onRequestClose={handlemodalclose}
-      style={customStyles}
-      contentLabel="Example Modal"
-    >
-      <div className="box-modal-delete">
-        <div className="text-delete">ท่านต้องการที่จะลบโพสต์ของผู้ใช้งานคนนี้หรือไม่ ?</div>
-        <div className="box-button-delete">
-        <button className="button-delete-ok"
-          onClick={() => deletedpost(modalcommentid, modalcommentmore)}
-        >
-          ตกลง{" "}
-        </button>
-        <div className="empty-delete"></div>
-        <button className="button-delete-cancle" onClick={() => handlemodalclose()}>ยกเลิก </button>
+      ) : text && text === "deletepostAdminPostAll" ? (
+        <div>
+          <Modal
+            isOpen={openmodal}
+            onRequestClose={handlemodalclose}
+            style={customStyles}
+            contentLabel="Example Modal"
+          >
+            <div className="box-modal-delete">
+              <div className="text-delete">
+                ท่านต้องการที่จะลบโพสต์ของผู้ใช้งานคนนี้หรือไม่ ?
+              </div>
+              <div className="box-button-delete">
+                <button
+                  className="button-delete-ok"
+                  onClick={() => deletedpost(modalcommentid, modalcommentmore)}
+                >
+                  ตกลง{" "}
+                </button>
+                <div className="empty-delete"></div>
+                <button
+                  className="button-delete-cancle"
+                  onClick={() => handlemodalclose()}
+                >
+                  ยกเลิก{" "}
+                </button>
+              </div>
+            </div>
+          </Modal>
         </div>
-      </div>
-    </Modal>
-    </div> : text && text === "deletemypostAdminMyPost" ? 
-      <div> 
-      <Modal
-      isOpen={openmodal}
-      onRequestClose={handlemodalclose}
-      style={customStyles}
-      contentLabel="Example Modal"
-    >
-      <div className="box-modal-delete">
-        <div className="text-delete">ท่านต้องการที่จะลบโพสต์ของผู้ใช้งานคนนี้หรือไม่ ?</div>
-        <div className="box-button-delete">
-        <button className="button-delete-ok"
-          onClick={() => deletedAdminMyPost(modalcommentid, modalcommentmore)}
-        >
-          ตกลง{" "}
-        </button>
-        <div className="empty-delete"></div>
-        <button className="button-delete-cancle" onClick={() => handlemodalclose()}>ยกเลิก </button>
+      ) : text && text === "deletemypostAdminMyPost" ? (
+        <div>
+          <Modal
+            isOpen={openmodal}
+            onRequestClose={handlemodalclose}
+            style={customStyles}
+            contentLabel="Example Modal"
+          >
+            <div className="box-modal-delete">
+              <div className="text-delete">
+                ท่านต้องการที่จะลบโพสต์ของผู้ใช้งานคนนี้หรือไม่ ?
+              </div>
+              <div className="box-button-delete">
+                <button
+                  className="button-delete-ok"
+                  onClick={() =>
+                    deletedAdminMyPost(modalcommentid, modalcommentmore)
+                  }
+                >
+                  ตกลง{" "}
+                </button>
+                <div className="empty-delete"></div>
+                <button
+                  className="button-delete-cancle"
+                  onClick={() => handlemodalclose()}
+                >
+                  ยกเลิก{" "}
+                </button>
+              </div>
+            </div>
+          </Modal>
         </div>
-      </div>
-    </Modal>
-    </div> : text && text === "deletepostAdminHideReport" ? 
-      <div> 
-      <Modal
-      isOpen={openmodal}
-      onRequestClose={handlemodalclose}
-      style={customStyles}
-      contentLabel="Example Modal"
-    >
-      <div className="box-modal-delete">
-        <div className="text-delete">ท่านต้องการที่จะลบประวัติการรายงานหรือไม่ ?</div>
-        <div className="box-button-delete">
-        <button className="button-delete-ok"
-          onClick={() => deletedAdminHideReport(modalcommentid, modalcommentmore)}
-        >
-          ตกลง{" "}
-        </button>
-        <div className="empty-delete"></div>
-        <button className="button-delete-cancle" onClick={() => handlemodalclose()}>ยกเลิก </button>
+      ) : text && text === "deletepostAdminHideReport" ? (
+        <div>
+          <Modal
+            isOpen={openmodal}
+            onRequestClose={handlemodalclose}
+            style={customStyles}
+            contentLabel="Example Modal"
+          >
+            <div className="box-modal-delete">
+              <div className="text-delete">
+                ท่านต้องการที่จะลบประวัติการรายงานหรือไม่ ?
+              </div>
+              <div className="box-button-delete">
+                <button
+                  className="button-delete-ok"
+                  onClick={() =>
+                    deletedAdminHideReport(modalcommentid, modalcommentmore)
+                  }
+                >
+                  ตกลง{" "}
+                </button>
+                <div className="empty-delete"></div>
+                <button
+                  className="button-delete-cancle"
+                  onClick={() => handlemodalclose()}
+                >
+                  ยกเลิก{" "}
+                </button>
+              </div>
+            </div>
+          </Modal>
         </div>
-      </div>
-    </Modal>
-    </div> : null}
+      ) : null}
     </div>
   );
 };

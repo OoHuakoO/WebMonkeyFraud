@@ -13,7 +13,7 @@ const Hidereport = () => {
   const initReport = async () => {
     try {
       const Allreport = await Axios.get(
-        "https://monkeyfruad01.herokuapp.com/post/report/hide"
+        "https://monkeyfraud.onrender.com/post/report/hide"
       );
       setReport(Allreport.data.report);
       console.log(Allreport.data.report);
@@ -40,12 +40,10 @@ const Hidereport = () => {
       </div>
       {report
         ? report.map((reportelement, index) => {
-            return (
-              <Listhidereport reportelement={reportelement} key={index} />
-            );
+            return <Listhidereport reportelement={reportelement} key={index} />;
           })
         : null}
-        <ScrollToTop/>
+      <ScrollToTop />
     </div>
   );
 };

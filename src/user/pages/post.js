@@ -116,14 +116,13 @@ const Post = () => {
     SetisOpen(!isOpen);
   };
 
-     
   console.log(result);
-  console.log(show)
+  console.log(show);
 
   const ok = async () => {
     Setloading(true);
     const getpost = await Axios.get(
-      `https://monkeyfruad01.herokuapp.com/post/post`
+      `https://monkeyfraud.onrender.com/post/post`
     );
     Setshow(getpost.data.item);
     if (sortvalue === "ใหม่ล่าสุด") {
@@ -137,7 +136,6 @@ const Post = () => {
     }
     Setloading(false);
     var item = [];
-
 
     getsort.filter((doc) => {
       if (checkfacebook) {
@@ -5780,7 +5778,6 @@ const Post = () => {
                 </Button>
               }
             >
-
               <Modal.Header className="nameslide">
                 ค้นหาโพสต์แบบละเอียด
               </Modal.Header>
@@ -6266,10 +6263,6 @@ const Post = () => {
               </Modal.Actions>
             </Modal>
 
-
-           
-          
-
             {loading ? (
               <ClipLoader />
             ) : (
@@ -6463,12 +6456,13 @@ const Post = () => {
                       <ClipLoader />
                     ) : (
                       <div>
-                             { (result && result.length === 0)  ?  <h1 className="h1-posts">
-                  {" "}
-                  ไม่พบโพสต์จากหมวดหมู่ที่คุณเลือก
-                  <div className="none-search"></div>
-              </h1>
-              : null}
+                        {result && result.length === 0 ? (
+                          <h1 className="h1-posts">
+                            {" "}
+                            ไม่พบโพสต์จากหมวดหมู่ที่คุณเลือก
+                            <div className="none-search"></div>
+                          </h1>
+                        ) : null}
                         {result ? (
                           result.map((res) => {
                             return (
@@ -7131,7 +7125,7 @@ const Post = () => {
           </div>
         </div>
       </div>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Chatbot />
     </div>
   );

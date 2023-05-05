@@ -218,23 +218,23 @@ const Dashboard = () => {
     let countUserApi = [];
     let countUser = [];
     let count = 0;
-    await Axios.get(
-      "https://monkeyfruad01.herokuapp.com/user/listuserofday"
-    ).then((res) => {
-      countUserApi.push(res.data.data);
-      dayOfWeek.forEach((dayofWeek) => {
-        countUserApi[0].forEach((element) => {
-          if (
-            moment(new Date(element.date.seconds * 1000)).format("MMM DD") ==
-            dayofWeek
-          ) {
-            count++;
-          }
+    await Axios.get("https://monkeyfraud.onrender.com/user/listuserofday").then(
+      (res) => {
+        countUserApi.push(res.data.data);
+        dayOfWeek.forEach((dayofWeek) => {
+          countUserApi[0].forEach((element) => {
+            if (
+              moment(new Date(element.date.seconds * 1000)).format("MMM DD") ==
+              dayofWeek
+            ) {
+              count++;
+            }
+          });
+          countUser.push(count);
+          count = 0;
         });
-        countUser.push(count);
-        count = 0;
-      });
-    });
+      }
+    );
     setdataChart([
       {
         label: "จำนวนผู้ใช้งานในเว็บ (คน)",
@@ -250,7 +250,7 @@ const Dashboard = () => {
     let countUser = [];
     let count = 0;
     await Axios.get(
-      "https://monkeyfruad01.herokuapp.com/user/listuserofmonth"
+      "https://monkeyfraud.onrender.com/user/listuserofmonth"
     ).then((res) => {
       countUserApi.push(res.data.data);
       dayOfMonth.forEach((dayofMonth) => {
@@ -282,7 +282,7 @@ const Dashboard = () => {
     let countUser = [];
     let count = 0;
     await Axios.get(
-      "https://monkeyfruad01.herokuapp.com/user/listuserofyear"
+      "https://monkeyfraud.onrender.com/user/listuserofyear"
     ).then((res) => {
       countUserApi.push(res.data.data);
       dayOfYear.forEach((dayofYear) => {
@@ -312,23 +312,23 @@ const Dashboard = () => {
     let countPostApi = [];
     let countPost = [];
     let count = 0;
-    await Axios.get(
-      "https://monkeyfruad01.herokuapp.com/post/listpostofday"
-    ).then((res) => {
-      countPostApi.push(res.data.data);
-      dayOfWeek.forEach((dayofWeek) => {
-        countPostApi[0].forEach((element) => {
-          if (
-            moment(new Date(element.date.seconds * 1000)).format("MMM DD") ==
-            dayofWeek
-          ) {
-            count++;
-          }
+    await Axios.get("https://monkeyfraud.onrender.com/post/listpostofday").then(
+      (res) => {
+        countPostApi.push(res.data.data);
+        dayOfWeek.forEach((dayofWeek) => {
+          countPostApi[0].forEach((element) => {
+            if (
+              moment(new Date(element.date.seconds * 1000)).format("MMM DD") ==
+              dayofWeek
+            ) {
+              count++;
+            }
+          });
+          countPost.push(count);
+          count = 0;
         });
-        countPost.push(count);
-        count = 0;
-      });
-    });
+      }
+    );
     // console.log(countUser);
     setdataChart([
       {
@@ -345,7 +345,7 @@ const Dashboard = () => {
     let countPost = [];
     let count = 0;
     await Axios.get(
-      "https://monkeyfruad01.herokuapp.com/post/listpostofmonth"
+      "https://monkeyfraud.onrender.com/post/listpostofmonth"
     ).then((res) => {
       countPostApi.push(res.data.data);
 
@@ -377,7 +377,7 @@ const Dashboard = () => {
     let countPost = [];
     let count = 0;
     await Axios.get(
-      "https://monkeyfruad01.herokuapp.com/post/listpostofyear"
+      "https://monkeyfraud.onrender.com/post/listpostofyear"
     ).then((res) => {
       countPostApi.push(res.data.data);
       dayOfYear.forEach((dayofYear) => {
@@ -408,7 +408,7 @@ const Dashboard = () => {
     let countSearch = [];
     let count = 0;
     await Axios.get(
-      "https://monkeyfruad01.herokuapp.com/post/listsearchofday"
+      "https://monkeyfraud.onrender.com/post/listsearchofday"
     ).then((res) => {
       countSearchApi.push(res.data.data);
 
@@ -440,7 +440,7 @@ const Dashboard = () => {
     let countSearch = [];
     let count = 0;
     await Axios.get(
-      "https://monkeyfruad01.herokuapp.com/post/listsearchofmonth"
+      "https://monkeyfraud.onrender.com/post/listsearchofmonth"
     ).then((res) => {
       countSearchApi.push(res.data.data);
 
@@ -472,7 +472,7 @@ const Dashboard = () => {
     let countSearch = [];
     let count = 0;
     await Axios.get(
-      "https://monkeyfruad01.herokuapp.com/post/listsearchofyear"
+      "https://monkeyfraud.onrender.com/post/listsearchofyear"
     ).then((res) => {
       countSearchApi.push(res.data.data);
 
@@ -504,7 +504,7 @@ const Dashboard = () => {
     let countReport = [];
     let count = 0;
     await Axios.get(
-      "https://monkeyfruad01.herokuapp.com/post/listreportofday"
+      "https://monkeyfraud.onrender.com/post/listreportofday"
     ).then((res) => {
       countReportApi.push(res.data.data);
 
@@ -536,7 +536,7 @@ const Dashboard = () => {
     let countReport = [];
     let count = 0;
     await Axios.get(
-      "https://monkeyfruad01.herokuapp.com/post/listreportofmonth"
+      "https://monkeyfraud.onrender.com/post/listreportofmonth"
     ).then((res) => {
       countReportApi.push(res.data.data);
 
@@ -568,7 +568,7 @@ const Dashboard = () => {
     let countReport = [];
     let count = 0;
     await Axios.get(
-      "https://monkeyfruad01.herokuapp.com/post/listreportofyear"
+      "https://monkeyfraud.onrender.com/post/listreportofyear"
     ).then((res) => {
       countReportApi.push(res.data.data);
 

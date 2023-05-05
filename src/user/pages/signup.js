@@ -32,7 +32,7 @@ const Signup = () => {
     e.preventDefault();
     console.log("submit");
     axios
-      .post("https://monkeyfruad01.herokuapp.com/user/signup", {
+      .post("https://monkeyfraud.onrender.com/user/signup", {
         username: username,
         firstname: firstname,
         surname: surname,
@@ -73,7 +73,7 @@ const Signup = () => {
     const result = await auth.signInWithPopup(googleProvider);
     console.log(result);
     axios
-      .post("https://monkeyfruad01.herokuapp.com/user/googlesignup", {
+      .post("https://monkeyfraud.onrender.com/user/googlesignup", {
         result: result,
       })
       .then((result) => {
@@ -91,7 +91,7 @@ const Signup = () => {
     const result = await auth.signInWithPopup(facebookProvider);
     console.log(result);
     axios
-      .post("https://monkeyfruad01.herokuapp.com/user/facebooksignup", {
+      .post("https://monkeyfraud.onrender.com/user/facebooksignup", {
         result: result,
       })
       .then((result) => {

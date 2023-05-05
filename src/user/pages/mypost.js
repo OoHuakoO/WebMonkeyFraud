@@ -98,7 +98,7 @@ const Mypost = () => {
   const ok = async () => {
     try {
       const ok = await Axios.get(
-        `https://monkeyfruad01.herokuapp.com/post/mypost/${uid}`
+        `https://monkeyfraud.onrender.com/post/mypost/${uid}`
       );
       Setmypost(ok.data.item);
     } catch (err) {
@@ -198,7 +198,7 @@ const Mypost = () => {
       } else {
         Setloading(true);
         Axios.post(
-          `https://monkeyfruad01.herokuapp.com/post/report/${uid}`,
+          `https://monkeyfraud.onrender.com/post/report/${uid}`,
           formData
         )
           .then((result) => {
@@ -215,7 +215,7 @@ const Mypost = () => {
       console.log(err);
     }
   };
-  console.log(mypost)
+  console.log(mypost);
   const handleselect = (e) => {
     if (!checkselectone) {
       setSelectone("");
@@ -671,8 +671,7 @@ const Mypost = () => {
                             >
                               <Form.Label className="text-mypost">
                                 <div className="spanmypost text-mypost-right">
-                                  {((ok.id && ok.id) === "") ? "-" : ok.id}
-                                
+                                  {(ok.id && ok.id) === "" ? "-" : ok.id}
                                 </div>
                               </Form.Label>
                             </Form.Group>
@@ -895,7 +894,9 @@ const Mypost = () => {
                           >
                             <Form.Label className="text-mypost1">
                               รายละเอียดเพิ่มเติม{" "}
-                              <div className="spanmypostmore">{((ok.other && ok.other) === "") ? "-" : ok.other}</div>
+                              <div className="spanmypostmore">
+                                {(ok.other && ok.other) === "" ? "-" : ok.other}
+                              </div>
                             </Form.Label>
                           </Form.Group>
                           <div className="imgcommentitemmypost1">
@@ -937,7 +938,7 @@ const Mypost = () => {
             : null}{" "}
         </div>
       ) : null}
-      <ScrollToTop/>
+      <ScrollToTop />
       <Chatbot />
     </div>
   );

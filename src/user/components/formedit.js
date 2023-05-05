@@ -171,9 +171,9 @@ const Formedit = ({ check, Setcheck }) => {
 
   const ok = async () => {
     const hello = await Axios.get(
-      `https://monkeyfruad01.herokuapp.com/post/edit/${uid}`
+      `https://monkeyfraud.onrender.com/post/edit/${uid}`
     );
-      
+
     let gethistory = hello.data.item;
     let getDatetime = hello.data.datetime;
     // if(gethistory[0].id === "-"){
@@ -194,7 +194,6 @@ const Formedit = ({ check, Setcheck }) => {
     setOther(gethistory[0].other);
     Setimagepost(gethistory[0].item);
   };
-
 
   useEffect(() => {
     ok();
@@ -229,7 +228,7 @@ const Formedit = ({ check, Setcheck }) => {
       Setloading(true);
       Setcheck(true);
       let data = await Axios.post(
-        `https://monkeyfruad01.herokuapp.com/post/edit/${uid}`,
+        `https://monkeyfraud.onrender.com/post/edit/${uid}`,
         formdata
       );
       Setfuck([]);
@@ -369,7 +368,7 @@ const Formedit = ({ check, Setcheck }) => {
                                   maxlength="13"
                                   title="กรอกตัวเลขเท่านั้น"
                                   placeholder=""
-                                  value={id} 
+                                  value={id}
                                   onChange={(event) => {
                                     setId(event.target.value);
                                   }}
@@ -729,7 +728,7 @@ const Formedit = ({ check, Setcheck }) => {
                 );
               })
             : null}
-            <ScrollToTop/>
+          <ScrollToTop />
           <Chatbot />
         </div>
       )}

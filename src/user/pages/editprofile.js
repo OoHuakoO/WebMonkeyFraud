@@ -23,7 +23,7 @@ const EditProfile = () => {
   const [male, setMale] = useState();
   const [loading, setLoading] = useState(true);
   const [showDropdown, SetshowDropdown] = useState(true);
-  const [usernameExist,setusernameExist] =  useState(false);
+  const [usernameExist, setusernameExist] = useState(false);
   // ฟังกชันการเลือกเพศใน input
   const selectSex = (e) => {
     if (e.target.value === "ชาย") {
@@ -61,14 +61,14 @@ const EditProfile = () => {
       formdata.append("province", province);
       await axios
         .post(
-          `https://monkeyfruad01.herokuapp.com/user/edit/profile/${user.uid}`,
+          `https://monkeyfraud.onrender.com/user/edit/profile/${user.uid}`,
           formdata
         )
         .then((result) => {
           if (result.data.usernameExist === true) {
             setusernameExist(true);
           } else if (result.data.usernameExist === false) {
-            setusernameExist(false)
+            setusernameExist(false);
             history.push(`/profile/${user.uid}`);
           }
         })
@@ -88,7 +88,7 @@ const EditProfile = () => {
   };
   useMemo(async () => {
     await axios
-      .post("https://monkeyfruad01.herokuapp.com/user/session", { user: user })
+      .post("https://monkeyfraud.onrender.com/user/session", { user: user })
       .then((result) => {
         setUsername(result.data.data.username);
         setFirstname(result.data.data.firstname);
@@ -134,13 +134,14 @@ const EditProfile = () => {
       />
       <div className="container-editprofile">
         <form className="EditProfileForm" onSubmit={SubmitHandle}>
-          {usernameExist ? 
+          {usernameExist ? (
             <div className="alert-login">
-              <span>Username นี้มีอยู่แล้วในระบบ <br /> 
+              <span>
+                Username นี้มีอยู่แล้วในระบบ <br />
                 กรุณากรอก Username ใหม่อีกครั้ง
               </span>
             </div>
-          :null}
+          ) : null}
           <p className="h1 text-center mb-2 font-weight-bold">
             แก้ไขข้อมูลส่วนตัว
           </p>

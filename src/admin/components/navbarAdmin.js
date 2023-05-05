@@ -115,11 +115,11 @@ const NavbarPage = (props) => {
   const initSearch = async () => {
     try {
       const getallthief = await axios.get(
-        `https://monkeyfruad01.herokuapp.com/thief/thief`
+        `https://monkeyfraud.onrender.com/thief/thief`
       );
       Setsearching(getallthief.data.item);
       const getallpost = await axios.get(
-        `https://monkeyfruad01.herokuapp.com/post/post`
+        `https://monkeyfraud.onrender.com/post/post`
       );
       Setallpost(getallpost.data.item);
       const getthief = getallthief.data.item;
@@ -168,7 +168,7 @@ const NavbarPage = (props) => {
 
   const initUser = async () => {
     await axios
-      .post("https://monkeyfruad01.herokuapp.com/user/session", {
+      .post("https://monkeyfraud.onrender.com/user/session", {
         user: user,
       })
       .then((result) => {
@@ -221,7 +221,10 @@ const NavbarPage = (props) => {
               </div>
             </MDBNavItem>
 
-            <button onClick={() => adminhandlesearch()} className="button-nav button-nav-admin">
+            <button
+              onClick={() => adminhandlesearch()}
+              className="button-nav button-nav-admin"
+            >
               ค้นหา
             </button>
             <MDBNavItem className="jud">
@@ -235,8 +238,8 @@ const NavbarPage = (props) => {
       <div className="ggadmin">
         {lastsearch
           ? lastsearch.map((doc) => {
-            let thiefNameAndSurname = `${doc.name} ${doc.surname}`;
-            let thiefAccountNumber = `${doc.accountnumber}`;
+              let thiefNameAndSurname = `${doc.name} ${doc.surname}`;
+              let thiefAccountNumber = `${doc.accountnumber}`;
               console.log(thiefNameAndSurname);
               i++;
               return (
@@ -262,23 +265,20 @@ const NavbarPage = (props) => {
                             </div>
                           </button>
                         ) : null
-                      ) : (
-                        props.showDropdown ? (
-                          <button
-                            className="search-nav"
-                            onClick={() =>
-                              (
-                              history.push({
-                                pathname: `/admin/thief/post/${thiefAccountNumber}`,
-                                search: "?are you ok",
-                              }),
-                              window.location.reload(true)
-                              )}
-                          >
-                            <div> {doc.accountnumber}</div>
-                          </button>
-                        ) : null
-                      ) }
+                      ) : props.showDropdown ? (
+                        <button
+                          className="search-nav"
+                          onClick={() => (
+                            history.push({
+                              pathname: `/admin/thief/post/${thiefAccountNumber}`,
+                              search: "?are you ok",
+                            }),
+                            window.location.reload(true)
+                          )}
+                        >
+                          <div> {doc.accountnumber}</div>
+                        </button>
+                      ) : null}
                     </div>
                   ) : null}
                 </div>
@@ -339,8 +339,8 @@ const NavbarPage = (props) => {
       <div className="gg">
         {lastsearch
           ? lastsearch.map((doc) => {
-            let thiefNameAndSurname = `${doc.name} ${doc.surname}`;
-            let thiefAccountNumber = `${doc.accountnumber}`;
+              let thiefNameAndSurname = `${doc.name} ${doc.surname}`;
+              let thiefAccountNumber = `${doc.accountnumber}`;
               console.log(thiefNameAndSurname);
               i++;
               return (
@@ -366,24 +366,20 @@ const NavbarPage = (props) => {
                             </div>
                           </button>
                         ) : null
-                      ) : (
-                        props.showDropdown ? (
-                          <button
-                            className="search-nav"
-                            onClick={() =>
-                              (
-                                history.push({
-                                  pathname: `/thief/post/${thiefAccountNumber}`,
-                                  search: "?are you ok",
-                                }),
-                                window.location.reload(true)
-                              )
-                            }
-                          >
-                            <div> {doc.accountnumber}</div>
-                          </button>
-                        ) : null
-                      )}
+                      ) : props.showDropdown ? (
+                        <button
+                          className="search-nav"
+                          onClick={() => (
+                            history.push({
+                              pathname: `/thief/post/${thiefAccountNumber}`,
+                              search: "?are you ok",
+                            }),
+                            window.location.reload(true)
+                          )}
+                        >
+                          <div> {doc.accountnumber}</div>
+                        </button>
+                      ) : null}
                     </div>
                   ) : null}
                 </div>

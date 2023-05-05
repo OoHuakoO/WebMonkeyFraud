@@ -56,11 +56,11 @@ const Listverifypost = ({ reportelement, hideClick }) => {
     try {
       InitOtherData();
       const usernamepost = await Axios.get(
-        `https://monkeyfruad01.herokuapp.com/post/mypost/${reportelement.postid}`
+        `https://monkeyfraud.onrender.com/post/mypost/${reportelement.postid}`
       );
       SetUsernamePost(usernamepost.data.item);
       const usernamereport = await Axios.get(
-        `https://monkeyfruad01.herokuapp.com/user/session/${reportelement.userreport}`
+        `https://monkeyfraud.onrender.com/user/session/${reportelement.userreport}`
       );
       SetUsernameReport(usernamereport.data.item);
     } catch (err) {
@@ -86,7 +86,7 @@ const Listverifypost = ({ reportelement, hideClick }) => {
   };
   const ChangeRead = async () => {
     await Axios.post(
-      `https://monkeyfruad01.herokuapp.com/post/report/changereadhide/${reportelement.uid}`
+      `https://monkeyfraud.onrender.com/post/report/changereadhide/${reportelement.uid}`
     );
     hideClick();
   };

@@ -123,13 +123,13 @@ const ManagePost = () => {
   console.log(change);
 
   const deleteClick = async (uid) => {
-    await Axios.post(`https://monkeyfruad01.herokuapp.com/post/delete/${uid}`);
+    await Axios.post(`https://monkeyfraud.onrender.com/post/delete/${uid}`);
     setDelectClick(!delectClick);
   };
   const ok = async () => {
     Setloading(true);
     const getpost = await Axios.get(
-      `https://monkeyfruad01.herokuapp.com/post/post`
+      `https://monkeyfraud.onrender.com/post/post`
     );
     Setshow(getpost.data.item);
     if (sortvalue === "ใหม่ล่าสุด") {
@@ -5775,7 +5775,7 @@ const ManagePost = () => {
           <Modal.Header className="nameslide">
             ค้นหาโพสต์แบบละเอียด
           </Modal.Header>
-          <button className="btncloseslide"  onClick={() => setOpen(false)}>
+          <button className="btncloseslide" onClick={() => setOpen(false)}>
             <i class="fa fa-times"></i>
           </button>
           <Modal.Content className="slidecontent">
@@ -6475,14 +6475,14 @@ const ManagePost = () => {
                       <ClipLoaderadmin />
                     ) : (
                       <div>
+                        {result && result.length === 0 ? (
+                          <h1 className="h1-posts">
+                            {" "}
+                            ไม่พบโพสต์จากหมวดหมู่ที่คุณเลือก
+                            <div className="none-search"></div>
+                          </h1>
+                        ) : null}
 
-{ (result && result.length === 0)  ?  <h1 className="h1-posts">
-                  {" "}
-                  ไม่พบโพสต์จากหมวดหมู่ที่คุณเลือก
-                  <div className="none-search"></div>
-              </h1>
-              : null}
-              
                         {result ? (
                           result.map((res) => {
                             return (
@@ -7159,7 +7159,7 @@ const ManagePost = () => {
           </div>
         </div>
       </div>
-      <ScrollToTop/>
+      <ScrollToTop />
     </div>
   );
 };

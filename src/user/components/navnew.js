@@ -61,18 +61,18 @@ const NavbarPage = (props) => {
     if (countNoti.length != 0) {
       SetHideCountNoti(true);
       await axios.post(
-        `https://monkeyfruad01.herokuapp.com/post/notichangeclick/${user.uid}`,
+        `https://monkeyfraud.onrender.com/post/notichangeclick/${user.uid}`,
         { countNoti }
       );
     }
   };
   const notiChangeRead = async (notiId) => {
     await axios.post(
-      `https://monkeyfruad01.herokuapp.com/post/notificationread/${notiId}`
+      `https://monkeyfraud.onrender.com/post/notificationread/${notiId}`
     );
   };
-  console.log(haha)
-  console.log(accountNumber)
+  console.log(haha);
+  console.log(accountNumber);
   const handlesearch = async () => {
     try {
       if (search) {
@@ -98,7 +98,7 @@ const NavbarPage = (props) => {
             },
           });
         }
-        await axios.post(`https://monkeyfruad01.herokuapp.com/post/search`, {
+        await axios.post(`https://monkeyfraud.onrender.com/post/search`, {
           search,
         });
       }
@@ -109,7 +109,7 @@ const NavbarPage = (props) => {
   const handleSearchDropdown = async (search) => {
     try {
       console.log(search);
-      await axios.post(`https://monkeyfruad01.herokuapp.com/post/search`, {
+      await axios.post(`https://monkeyfraud.onrender.com/post/search`, {
         search,
       });
       history.push({
@@ -124,11 +124,11 @@ const NavbarPage = (props) => {
   const initSearch = async () => {
     try {
       const getallthief = await axios.get(
-        `https://monkeyfruad01.herokuapp.com/thief/thief`
+        `https://monkeyfraud.onrender.com/thief/thief`
       );
       Setsearching(getallthief.data.item);
       const getallpost = await axios.get(
-        `https://monkeyfruad01.herokuapp.com/post/post`
+        `https://monkeyfraud.onrender.com/post/post`
       );
       Setallpost(getallpost.data.item);
       const getthief = getallthief.data.item;
@@ -144,19 +144,20 @@ const NavbarPage = (props) => {
               ).startsWith(search.toLowerCase())
             ) {
               Sethaha(true);
-              console.log("1")
-            }
-            else if (doc.accountnumber.startsWith(search)) {
+              console.log("1");
+            } else if (doc.accountnumber.startsWith(search)) {
               // console.log("2")
               Sethaha(false);
-            }
-            else if (doc.name.toLowerCase().startsWith(search.toLowerCase())) {
+            } else if (
+              doc.name.toLowerCase().startsWith(search.toLowerCase())
+            ) {
               Sethaha(true);
-              console.log("3")
-            }
-            else if (doc.surname.toLowerCase().startsWith(search.toLowerCase())) {
+              console.log("3");
+            } else if (
+              doc.surname.toLowerCase().startsWith(search.toLowerCase())
+            ) {
               Sethaha(true);
-              console.log("4")
+              console.log("4");
             }
             return (
               doc.name.toLowerCase().startsWith(search.toLowerCase()) ||
@@ -181,7 +182,7 @@ const NavbarPage = (props) => {
   console.log(lastsearch);
   const initUser = async () => {
     await axios
-      .post("https://monkeyfruad01.herokuapp.com/user/session", {
+      .post("https://monkeyfraud.onrender.com/user/session", {
         user: user,
       })
       .then((result) => {
@@ -189,9 +190,7 @@ const NavbarPage = (props) => {
         setPhotoProfile(result.data.data.photoURL);
       });
     await axios
-      .post(
-        `https://monkeyfruad01.herokuapp.com/post/getnotification/${user.uid}`
-      )
+      .post(`https://monkeyfraud.onrender.com/post/getnotification/${user.uid}`)
       .then((result) => {
         setNoti(result.data);
       })
@@ -200,7 +199,7 @@ const NavbarPage = (props) => {
       });
     await axios
       .post(
-        `https://monkeyfruad01.herokuapp.com/post/getnoticlickfalse/${user.uid}`
+        `https://monkeyfraud.onrender.com/post/getnoticlickfalse/${user.uid}`
       )
       .then((result) => {
         if (result.data[0] === undefined) {
@@ -314,7 +313,9 @@ const NavbarPage = (props) => {
               </MDBDropdownMenu>
             ) : (
               <MDBDropdownMenu className="dropdown-default dropdown-top-noti">
-                <div className="box-nav-noti"><p className="no-noti">ยังไม่มีการเเจ้งเตือน</p></div>{" "}
+                <div className="box-nav-noti">
+                  <p className="no-noti">ยังไม่มีการเเจ้งเตือน</p>
+                </div>{" "}
               </MDBDropdownMenu>
             )}
           </MDBDropdown>
@@ -577,18 +578,16 @@ const NavbarPage = (props) => {
                               </div>
                             </button>
                           ) : null
-                        ) : (
-                          props.showDropdown ? (
-                            <button
-                              className="search-nav"
-                              onClick={() =>
-                                handleSearchDropdown(thiefAccountNumber)
-                              }
-                            >
-                              <div> {doc.accountnumber}</div>
-                            </button>
-                          ) : null
-                        ) }
+                        ) : props.showDropdown ? (
+                          <button
+                            className="search-nav"
+                            onClick={() =>
+                              handleSearchDropdown(thiefAccountNumber)
+                            }
+                          >
+                            <div> {doc.accountnumber}</div>
+                          </button>
+                        ) : null}
                       </div>
                     ) : null}
                   </div>
@@ -630,18 +629,16 @@ const NavbarPage = (props) => {
                               </div>
                             </button>
                           ) : null
-                        ) : (
-                          props.showDropdown ? (
-                            <button
-                              className="search-nav"
-                              onClick={() =>
-                                handleSearchDropdown(thiefAccountNumber)
-                              }
-                            >
-                              <div> {doc.accountnumber}</div>
-                            </button>
-                          ) : null
-                        )}
+                        ) : props.showDropdown ? (
+                          <button
+                            className="search-nav"
+                            onClick={() =>
+                              handleSearchDropdown(thiefAccountNumber)
+                            }
+                          >
+                            <div> {doc.accountnumber}</div>
+                          </button>
+                        ) : null}
                       </div>
                     ) : null}
                   </div>

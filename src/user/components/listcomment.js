@@ -177,7 +177,7 @@ const Listcomment = ({
 
       Setloading(true);
       const editcomment = await Axios.post(
-        `https://monkeyfruad01.herokuapp.com/post/edit/comment/${commentid}`,
+        `https://monkeyfraud.onrender.com/post/edit/comment/${commentid}`,
         formdata
       );
 
@@ -291,7 +291,7 @@ const Listcomment = ({
                   <Modaldelete
                     text="deletecomment"
                     openmodal={isOpenModalDelete}
-                    handlemodalclose={handlemodalclose} 
+                    handlemodalclose={handlemodalclose}
                     modalcommentid={modalcommentid}
                     modalcommentmore={modalcommentmore}
                     setIsActive={setIsActive}

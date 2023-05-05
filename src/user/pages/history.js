@@ -20,9 +20,12 @@ const History = () => {
   };
   const ok = async () => {
     try {
-      const ok = await Axios.post("https://monkeyfruad01.herokuapp.com/post/postapi", {
-        result: user,
-      });
+      const ok = await Axios.post(
+        "https://monkeyfraud.onrender.com/post/postapi",
+        {
+          result: user,
+        }
+      );
       Setmypost(ok.data.item);
     } catch (err) {
       console.log("error");
@@ -66,7 +69,7 @@ const History = () => {
         : null}
       <div className="containeremty-history"></div>
       <div className="container-historebottom"></div>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Chatbot />
     </div>
   );

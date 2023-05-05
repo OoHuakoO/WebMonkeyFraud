@@ -42,7 +42,7 @@ const Login = () => {
     const result = await auth.signInWithPopup(googleProvider);
     console.log(result);
     axios
-      .post("https://monkeyfruad01.herokuapp.com/user/googlesignup", {
+      .post("https://monkeyfraud.onrender.com/user/googlesignup", {
         result: result,
       })
       .then((result) => {
@@ -139,7 +139,10 @@ const Login = () => {
             </p>
           </div>
 
-          <button onClick={googleLogin} className="btn-block LoginGoogle-login mt-2">
+          <button
+            onClick={googleLogin}
+            className="btn-block LoginGoogle-login mt-2"
+          >
             <svg
               className="GoogleIcon"
               xmlns="http://www.w3.org/2000/svg"
