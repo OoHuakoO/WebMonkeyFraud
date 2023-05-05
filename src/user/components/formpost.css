@@ -1,0 +1,380 @@
+.container-formpost {
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.profile-badformpost-img {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.profile-badformpost-img img.img-circle {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.uploadinputprofile {
+  margin-top: 10px;
+}
+
+.uploadiconprofile {
+  width: 20px;
+}
+
+.uploadproveformpost {
+  width: 100px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#FileInput {
+  cursor: pointer;
+  display: none;
+}
+
+.FileInput {
+  cursor: pointer;
+  display: none;
+}
+
+.rank-label-container {
+  margin-top: -19px;
+  text-align: center;
+}
+
+.fileinput {
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+}
+
+.text-formpost {
+  font-size: 16px;
+}
+
+.formpost-left {
+  margin-right: 15px;
+}
+
+.spanformpost {
+  color: #ff392e;
+  font-size: 16px;
+}
+
+.imgpreview {
+  margin: 15px 0 5px 0;
+  width: 155px;
+  height: 155px;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+}
+
+.postdelete {
+  display: flex;
+  width: 100%;
+}
+
+.deleteimgformposts1 {
+  position: relative;
+  right: 15px;
+  top: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 13px;
+  font-family: sans-serif;
+}
+
+.deleteimgformposts2 {
+  width: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.deleteimgformposts2:hover {
+  transition: box-shadow 0.4s ease;
+  background-color: rgb(230, 230, 230);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.uploadprove {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.uploadproveeditpost {
+  justify-items: center;
+  align-items: center;
+}
+
+.uploadproveeditpost1 {
+  margin-top: 15px;
+  width: 155px;
+  height: 155px;
+  background-color: rgb(233, 233, 233);
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  cursor: pointer;
+}
+
+.uploadproveeditpost1:hover {
+  background-color: rgb(201, 200, 200);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.uploadproveeditpost2 {
+  width: 100%;
+  padding: 55px;
+}
+
+.imgcommentitemformpost1 {
+  display: grid;
+  /* grid-gap: 10px; */
+  /* margin-right: 20px; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.uploadprovereport {
+  width: 20%;
+  margin-top: 20px;
+}
+
+.buttonformpost {
+  width: 100%;
+  font-size: 20px;
+  background-color: #5c83cc;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  padding: 0.5rem;
+}
+
+.buttonformpost:hover {
+  background-color: #3c6fce;
+  cursor: pointer;
+}
+
+.h1-formpostfileerror {
+  color: #ff392e;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  font-size: 14px !important;
+}
+
+.none-formpost {
+  display: block !important;
+}
+
+/*Responsive*/
+@media only screen and (min-width: 1920px) {
+  .imgpreview,
+  .uploadproveeditpost1 {
+    width: 202px;
+    height: 202px;
+  }
+  .uploadproveeditpost2 {
+    padding: 60px;
+  }
+
+  /*พั้น*/
+  .text-formpost,
+  .h1-formpostfileerror,
+  .spanformpost,
+  .buttonformpost {
+    font-size: 18px;
+  }
+  .form-control {
+    font-size: 16px !important;
+  }
+}
+
+@media only screen and (max-width: 1367px) {
+  .imgpreview,
+  .uploadproveeditpost1 {
+    width: 134px;
+    height: 134px;
+  }
+
+  /*พั้น*/
+  .text-formpost,
+  .h1-formpostfileerror,
+  .spanformpost,
+  .buttonformpost {
+    font-size: 16px;
+  }
+  .form-control {
+    font-size: 14px !important;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .container-formpost {
+    width: 75%;
+  }
+  .uploadproveeditpost2 {
+    padding: 65px;
+  }
+
+  /*พั้น*/
+  .imgpreview,
+  .uploadproveeditpost1 {
+    width: 157px;
+    height: 157px;
+  }
+  .text-formpost {
+    font-size: 16px !important;
+  }
+  .form-control,
+  .h1-formpostfileerror,
+  .spanformpost,
+  .buttonformpost {
+    font-size: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  /*พั้น*/
+  .container-formpost {
+    margin-bottom: 80px;
+    padding-top: 10px;
+  }
+  .imgpreview,
+  .uploadproveeditpost1 {
+    width: 109px;
+    height: 109px;
+  }
+  .uploadproveeditpost2 {
+    padding: 45px;
+  }
+  .text-formpost {
+    font-size: 14px !important;
+  }
+  .form-control,
+  .h1-formpostfileerror,
+  .spanformpost,
+  .buttonformpost {
+    font-size: 13px !important;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .container-formpost {
+    width: 85%;
+    margin-bottom: 80px;
+    padding-top: 10px;
+  }
+  .profile-badformpost-img img.img-circle {
+    width: 130px !important;
+    height: 130px !important;
+  }
+  .imgcommentitemformpost1 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .imgpreview,
+  .uploadproveeditpost1 {
+    width: 127px;
+    height: 127px;
+  }
+  .uploadproveeditpost2 {
+    padding: 45px;
+  }
+  .uploadproveformpost {
+    width: 70px;
+  }
+  .deleteimgformposts2 {
+    width: 20px !important;
+    margin-left: 5px !important;
+  }
+  .text-formpost {
+    font-size: 16px !important;
+  }
+  .form-control,
+  .h1-formpostfileerror,
+  .spanformpost,
+  .buttonformpost {
+    font-size: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  /*พั้น*/
+  .container-formpost {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+  }
+  .text-formpost {
+    font-size: 14px !important;
+  }
+  .h1-formpostfileerror,
+  .buttonformpost,
+  .spanformpost,
+  .form-control {
+    font-size: 13px !important;
+  }
+  .imgpreview,
+  .uploadproveeditpost1 {
+    width: 119px;
+    height: 119px;
+  }
+  .uploadproveeditpost2 {
+    padding: 45px;
+  }
+  .uploadproveformpost {
+    width: 65px;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .container-formpost {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+  }
+  .spanformpost,
+  .h1-formpostfileerror {
+    font-size: 12px !important;
+  }
+  .imgpreview,
+  .uploadproveeditpost1 {
+    width: 101px;
+    height: 101px;
+  }
+  .uploadproveeditpost2 {
+    padding: 35px;
+  }
+  .uploadproveformpost {
+    width: 65px;
+  }
+}

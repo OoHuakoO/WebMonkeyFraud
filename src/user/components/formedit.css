@@ -1,0 +1,383 @@
+.container-formedit {
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 45px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.profile-badformedit-img {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.profile-badformedit-img img.img-circle {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.uploadinputeditprofile {
+  margin-top: 10px;
+}
+
+.uploadiconprofileedit {
+  width: 20px;
+}
+
+.uploadproveformpost-edit {
+  width: 100px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#FileInput {
+  cursor: pointer;
+  display: none;
+}
+
+.FileInput {
+  cursor: pointer;
+  display: none;
+}
+
+.rank-label-container-edit {
+  margin-top: -19px;
+  text-align: center;
+}
+
+.fileinputedit {
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+}
+
+.text-formedit {
+  font-size: 16px;
+}
+
+.formedit-left {
+  margin-right: 15px;
+}
+
+.spanformedit {
+  color: #ff392e;
+  font-size: 16px;
+}
+
+.imgpreview-edit {
+  margin: 15px 0 5px 0;
+  width: 155px;
+  height: 155px;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+}
+
+.postdelete {
+  display: flex;
+  width: 100%;
+}
+
+.deleteimgformposts1 {
+  position: relative;
+  right: 15px;
+  top: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 13px;
+  font-family: sans-serif;
+}
+
+.deleteimgformposts2 {
+  width: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.deleteimgformposts2:hover {
+  transition: box-shadow 0.4s ease;
+  background-color: rgb(230, 230, 230);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+/* .linkruleedit1{
+    margin-top: 10px;
+}
+.linkruleedit2{ 
+    display: inline;
+}
+.linkruleedit3, .linkruleedit3:hover{ 
+    display: inline-block;
+    color: red;
+    margin-left: 2px;
+    margin-bottom: 10px;
+} */
+
+/* .uploadsformedituploadslip{
+    margin-top: 10px;
+    margin-bottom: 10px;
+} */
+
+/* .uploadprove-edit {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+} */
+
+.uploadproveeditpost-edit {
+  justify-items: center;
+  align-items: center;
+}
+
+.uploadproveeditpost1-edit {
+  margin-top: 15px;
+  width: 155px;
+  height: 155px;
+  background-color: rgb(233, 233, 233);
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  cursor: pointer;
+}
+
+.uploadproveeditpost1-edit:hover {
+  background-color: rgb(201, 200, 200);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.uploadproveeditpost2-edit {
+  width: 100%;
+  padding: 55px;
+}
+
+.imgcommentitemformpost1-edit {
+  display: grid;
+  /* grid-gap: 10px; */
+  /* margin-right: 20px; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.buttonformedit {
+  width: 100%;
+  font-size: 20px;
+  background-color: #5c83cc;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  padding: 0.5rem;
+}
+
+.buttonformedit:hover {
+  background-color: #3c6fce;
+  cursor: pointer;
+}
+
+.h1-formeditfileerror {
+  color: #ff392e;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  font-size: 14px !important;
+}
+
+/*Responsive*/
+@media only screen and (min-width: 1920px) {
+  .imgpreview-edit,
+  .uploadproveeditpost1-edit {
+    width: 202px;
+    height: 202px;
+  }
+  .uploadproveeditpost2-edit {
+    padding: 60px;
+  }
+
+  /*พั้น*/
+  .text-formedit,
+  .h1-formeditfileerror,
+  .spanformedit,
+  .buttonformedit {
+    font-size: 18px;
+  }
+  .form-control {
+    font-size: 16px !important;
+  }
+}
+
+@media only screen and (max-width: 1367px) {
+  .imgpreview-edit,
+  .uploadproveeditpost1-edit {
+    width: 134px;
+    height: 134px;
+  }
+
+  /*พั้น*/
+  .text-formedit,
+  .h1-formeditfileerror,
+  .spanformedit,
+  .buttonformedit {
+    font-size: 16px;
+  }
+  .form-control {
+    font-size: 14px !important;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .container-formedit {
+    width: 75%;
+  }
+  .uploadproveeditpost2-edit {
+    padding: 65px;
+  }
+
+  /*พั้น*/
+  .imgpreview-edit,
+  .uploadproveeditpost1-edit {
+    width: 157px;
+    height: 157px;
+  }
+  .text-formedit {
+    font-size: 16px !important;
+  }
+  .form-control,
+  .h1-formeditfileerror,
+  .spanformedit,
+  .buttonformedit {
+    font-size: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  /*พั้น*/
+  .imgpreview-edit,
+  .uploadproveeditpost1-edit {
+    width: 109px;
+    height: 109px;
+  }
+  .uploadproveeditpost2-edit {
+    padding: 45px;
+  }
+  .text-formedit {
+    font-size: 14px !important;
+  }
+  .form-control,
+  .h1-formeditfileerror,
+  .spanformedit,
+  .buttonformedit {
+    font-size: 13px !important;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .container-formedit {
+    width: 85%;
+    margin-bottom: 80px;
+    padding-top: 25px;
+  }
+  .profile-badformedit-img img.img-circle {
+    width: 130px;
+    height: 130px;
+  }
+  .imgcommentitemformpost1-edit {
+    grid-template-columns: 1fr 1fr;
+  }
+  .imgpreview-edit,
+  .uploadproveeditpost1-edit {
+    width: 127px;
+    height: 127px;
+  }
+  .uploadproveeditpost2-edit {
+    padding: 45px;
+  }
+  .uploadproveformpost-edit {
+    width: 70px;
+  }
+  .deleteimgformposts2 {
+    width: 20px;
+    margin-left: 5px;
+  }
+  .text-formedit {
+    font-size: 16px !important;
+  }
+  .form-control,
+  .h1-formeditfileerror,
+  .spanformedit,
+  .buttonformedit {
+    font-size: 15px !important;
+  }
+}
+@media only screen and (max-width: 376px) {
+  /*พั้น*/
+  .container-formedit {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 35px;
+  }
+  .imgpreview-edit,
+  .uploadproveeditpost1-edit {
+    width: 119px;
+    height: 119px;
+  }
+  .uploadproveeditpost2-edit {
+    padding: 45px;
+  }
+  .uploadproveformpost-edit {
+    width: 65px;
+  }
+  .text-formedit {
+    font-size: 14px !important;
+  }
+  .form-control,
+  .h1-formeditfileerror,
+  .spanformedit,
+  .buttonformedit {
+    font-size: 13px !important;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .container-formedit {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+  }
+  .imgpreview-edit,
+  .uploadproveeditpost1-edit {
+    width: 101px;
+    height: 101px;
+  }
+  .uploadproveeditpost2-edit {
+    padding: 35px;
+  }
+  .uploadproveformpost-edit {
+    width: 65px;
+  }
+  .h1-formeditfileerror,
+  .spanformedit {
+    font-size: 12px !important;
+  }
+}

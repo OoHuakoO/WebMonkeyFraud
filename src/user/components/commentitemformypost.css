@@ -1,0 +1,400 @@
+.mypost-comment-commentsall {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+}
+
+.mypost-comment-img1 img.img-circle1 {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.mypost-comment-comments1 {
+  display: grid;
+  grid-template-columns: 7.5% 1fr;
+  padding: 10px 0;
+}
+
+.mypost-section-commment {
+  background-color: rgb(245, 245, 245);
+  margin: 0 0 0 10px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container-img-holder-imgpreview2 {
+  width: 100%;
+}
+
+.uploadprove2 {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.inputcommentmypost2 {
+  width: 100%;
+  border: none;
+  margin-top: 8px;
+  font-size: 16px;
+  background-color: rgb(245, 245, 245);
+  padding: 0 10px;
+}
+
+.mypostbuttonsendss {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  align-items: center;
+  transition: box-shadow 0.4s ease;
+}
+
+.mypostbuttonsends1 {
+  margin: 0 auto;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 20px;
+  border-radius: 50%;
+  border: none;
+  color: grey;
+}
+
+.mypostbuttonsends1:hover {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.profile-comment2 {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.imgcommentitemmypost2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 20px 0 -30px 0;
+}
+
+.imgpreviewb1 {
+  position: relative;
+  margin: 0;
+  width: 147px;
+  height: 147px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 20px;
+}
+
+.uploadproveeditmypost {
+  justify-items: center;
+  align-items: center;
+}
+
+.uploadproveeditmypost1 {
+  width: 147px;
+  height: 147px;
+  background-color: rgb(233, 233, 233);
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+
+.uploadproveedit1mypost:hover {
+  background-color: rgb(201, 200, 200);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.uploadproveeditmypost2 {
+  width: 100%;
+  padding: 50px;
+}
+
+.postdeletemypost {
+  display: flex;
+  width: 100%;
+}
+
+.deleteimgmyposts1 {
+  position: relative;
+  right: 15px;
+  top: -10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 13px;
+  font-family: 'Kanit', sans-serif;
+}
+
+.deleteimgmyposts2 {
+  width: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.deleteimgmyposts2:hover {
+  transition: box-shadow 0.4s ease;
+  background-color: rgb(230, 230, 230);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.inputmypostcomment2 {
+  width: 170%;
+  background-color: rgb(245, 245, 245);
+  border: none;
+}
+
+.column1 {
+  width: 90%;
+}
+
+.column2 {
+  width: 10%;
+}
+
+.h1-mypostfileerror {
+  color: #ff392e;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px 0 !important;
+  font-family: 'Kanit', sans-serif;
+}
+
+/* .uploadprove2 , .inputcommentmypost2 ,.mypostbuttonsends1{
+  display: none;
+} */
+
+/*Responsive*/
+@media only screen and (min-width: 1920px) {
+  .mypost-comment-comments1 {
+    grid-template-columns: 5.9% 1fr;
+  }
+  .inputcommentmypost2,
+  .h1-mypostfileerror {
+    font-size: 18px;
+  }
+  .imgpreviewb1,
+  .uploadproveeditmypost1 {
+    width: 177px;
+    height: 177px;
+  }
+  .uploadproveeditmypost2 {
+    padding: 60px;
+  }
+}
+
+@media only screen and (max-width: 1367px) {
+  .mypost-comment-comments1 {
+    grid-template-columns: 8.5% 1fr;
+  }
+  .inputcommentmypost2,
+  .h1-mypostfileerror {
+    font-size: 16px;
+  }
+  .imgpreviewb1,
+  .uploadproveeditmypost1 {
+    width: 133px;
+    height: 133px;
+  }
+  .uploadproveeditmypost2 {
+    padding: 45px;
+  }
+  .imgcommentitemmypost2 {
+    margin: 20px 0 -33px 0;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .mypost-comment-comments1 {
+    grid-template-columns: 7.5% 1fr;
+  }
+  .inputcommentmypost2,
+  .h1-mypostfileerror {
+    font-size: 15px;
+  }
+  .imgpreviewb1,
+  .uploadproveeditmypost1 {
+    width: 132px;
+    height: 132px;
+  }
+  .uploadproveeditmypost2 {
+    padding: 45px;
+  }
+  .imgcommentitemmypost2 {
+    margin: 20px 0 -25px 0;
+  }
+  .postbuttonsends1 {
+    margin: 2px auto;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .mypost-comment-comments1 {
+    grid-template-columns: 10.5% 1fr;
+  }
+  .inputcommentmypost2,
+  .h1-mypostfileerror {
+    font-size: 13px;
+  }
+  .imgpreviewb1,
+  .uploadproveeditmypost1 {
+    width: 83px;
+    height: 83px;
+  }
+  .uploadproveeditmypost2 {
+    padding: 30px;
+  }
+  .postbuttonsends1 {
+    margin: 2px auto;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .mypost-comment-comments1 {
+    padding: 0;
+    grid-template-columns: 15% 1fr;
+  }
+  .inputcommentmypost2,
+  .h1-mypostfileerror {
+    font-size: 13px;
+  }
+  .imgpreviewb1,
+  .uploadproveeditmypost1 {
+    width: 107px;
+    height: 107px;
+  }
+  .uploadproveeditmypost2 {
+    padding: 35px;
+  }
+  .imgcommentitemmypost2 {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px 0;
+    margin: 10px 0 -20px 0;
+  }
+  .mypost-section-commment {
+    padding: 10px;
+  }
+  .mypost-comment-commentsall {
+    grid-template-columns: 30px 1fr 30px;
+  }
+  .profile-comment2{
+    width: 45px;
+    height: 45px;
+  }
+  .uploadprove2 {
+    width: 30px;
+    height: 30px;
+  }
+  .deleteimgmyposts1 {
+    margin-top: 10px;
+  }
+  .mypostbuttonsends1 {
+    margin: 5px auto;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .mypost-comment-comments1 {
+    padding: 0;
+    grid-template-columns: 16% 1fr!important;
+  }
+  .profile-comment2{
+    width: 45px;
+    height: 45px;
+  }
+  .uploadprove2 {
+    width: 30px;
+    height: 30px;
+  }
+  .inputcommentmypost2,
+  .h1-mypostfileerror {
+    font-size: 13px;
+  }
+  .imgpreviewb1,
+  .uploadproveeditmypost1 {
+    width: 92px;
+    height: 92px;
+  }
+  .uploadproveeditmypost2 {
+    padding: 30px;
+  }
+  .imgcommentitemmypost2 {
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 0 -20px 0;
+  }
+  .mypost-section-commment {
+    padding: 10px;
+  }
+  .mypost-comment-commentsall {
+    grid-template-columns: 30px 1fr 30px;
+  }
+  .mypostbuttonsends1 {
+    margin: 5px auto;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .mypost-comment-comments1 {
+    padding: 0;
+    grid-template-columns: 17.5% 1fr !important;
+  }
+  .profile-comment2{
+    width: 40px;
+    height: 40px;
+  }
+  .uploadprove2 {
+    width: 25px;
+    height: 25px;
+  }
+  .inputcommentmypost2,
+  .h1-mypostfileerror {
+    font-size: 12px;
+  }
+  .imgpreviewb1,
+  .uploadproveeditmypost1 {
+    width: 72.5px;
+    height: 72.5px;
+  }
+  .uploadproveeditmypost2 {
+    padding: 25px;
+  }
+  .mypost-section-commment {
+    padding: 6px 8px;
+  }
+  .imgcommentitemmypost2 {
+    grid-template-columns: 1fr 1fr;
+    margin: 8px 0 -20px 0;
+  }
+  .mypost-comment-commentsall {
+    grid-template-columns: 25px 1fr 26px !important;
+  }
+  .mypostbuttonsends1 {
+    margin: 5px auto;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+}
